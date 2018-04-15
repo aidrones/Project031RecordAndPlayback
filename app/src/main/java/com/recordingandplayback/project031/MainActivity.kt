@@ -28,6 +28,12 @@ class MainActivity: AppCompatActivity () {
             val mediaPlayer = MediaPlayer.create (this, url1)
             mediaPlayer.start ()
         }
+
+        val btnStop = findViewById (R.id.btnStop) as Button
+        btnStop.setOnClickListener {
+            val mediaPlayer = MediaPlayer.create(this, url1)
+            mediaPlayer.stop()
+        }
     }
 
     override fun onActivityResult (requestCode: Int, resultCode: Int, data: Intent) {
